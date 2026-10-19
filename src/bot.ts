@@ -2,8 +2,15 @@ import { resolve } from 'node:path';
 
 import { Seedcord } from '@seedcord/gateway';
 import { GatewayIntentBits } from 'discord.js';
+import { Converters, Envapter } from 'envapt';
 
 const { dirname } = import.meta;
+
+Envapter.baseDir = resolve(import.meta.dirname, '..');
+
+const testGuildIds = Envapter.isDevelopment
+    ? Envapter.getUsing('TEST_GUILD_IDS', Converters.array({ of: 'string' }), [])
+    : [];
 
 export const seedcord = new Seedcord({
     bot: {
@@ -14,6 +21,7 @@ export const seedcord = new Seedcord({
             path: resolve(dirname, './handlers')
         },
         commands: {
+            guilds: testGuildIds,
             path: resolve(dirname, './commands')
         },
         events: {
