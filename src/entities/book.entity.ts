@@ -5,6 +5,7 @@ const BookSchema = defineEntity({
     name: 'Book',
     extends: BaseEntity,
     properties: {
+        id: p.integer().primary(),
         title: p.string(),
         description: p.string().nullable().default(null),
         createdAt: p

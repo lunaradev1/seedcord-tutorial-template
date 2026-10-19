@@ -5,6 +5,7 @@ const AuthorSchema = defineEntity({
     name: 'Author',
     extends: BaseEntity,
     properties: {
+        id: p.integer().primary(),
         name: p.string(),
         createdAt: p
             .datetime()
