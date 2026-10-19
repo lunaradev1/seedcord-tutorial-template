@@ -1,0 +1,12 @@
+{
+    "files.watcherExclude": {
+        "**/seedcord-gen.d.ts": true
+    },
+    "search.exclude": {
+        "**/seedcord-gen.d.ts": true
+    },
+    "files.readonlyInclude": {
+        "**/seedcord-gen.d.ts": true
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+}

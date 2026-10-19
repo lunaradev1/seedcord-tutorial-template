@@ -1,0 +1,12 @@
+import { BuilderComponent, RegisterCommand } from '@seedcord/gateway';
+
+@RegisterCommand('global')
+export class Ping extends BuilderComponent<'command'> {
+    constructor() {
+        super('command');
+
+        this.instance
+            .setName('ping')
+            .setDescription('Check that the bot is answering')
+    }
+}

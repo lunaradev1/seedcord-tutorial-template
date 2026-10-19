@@ -1,0 +1,17 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "extends": "@seedcord/tsconfig/node",
+    "compilerOptions": {
+        "rootDir": "./",
+        "outDir": "./dist",
+        "paths": {
+            "@/*": ["./src/*"],
+            "@components/*": ["./src/components/*"],
+            "@entities/*": ["./src/entities/*"],
+            "@plugins/*": ["./src/plugins/*"],
+            "@root/*": ["./*"]
+        }
+    },
+    "include": ["src/**/*.ts", "eslint.config.ts", "prettier.config.ts", "seedcord.config.ts", "mikro-orm.config.ts"],
+    "exclude": ["node_modules", "dist"]
+}

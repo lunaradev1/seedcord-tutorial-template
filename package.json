@@ -1,0 +1,44 @@
+{
+    "name": "bot-template",
+    "type": "module",
+    "version": "0.1.0",
+    "private": true,
+    "engines": {
+        "bun": ">=1.4.2"
+    },
+    "scripts": {
+        "dev": "seedcord dev",
+        "build": "seedcord build",
+        "start": "node --enable-source-maps dist/index.mjs",
+        "codegen": "seedcord codegen",
+        "lint": "eslint 'src/**/*.ts' --cache",
+        "lint:fix": "eslint 'src/**/*.ts' --fix --cache",
+        "mikro": "mikro-orm",
+        "fmt": "prettier --write 'src/**/*.{ts,json,md}' --cache",
+        "fmt:check": "prettier --check 'src/**/*.{ts,json,md}' --cache",
+        "tc": "tsc --noEmit"
+    },
+    "dependencies": {
+        "@discordjs/builders": "^1.14.1",
+        "@mikro-orm/core": "^7.2.5",
+        "@mikro-orm/migrations": "^7.2.5",
+        "@mikro-orm/pglite": "^7.2.5",
+        "@mikro-orm/seeder": "^7.2.5",
+        "@mikro-orm/sql-highlighter": "^1.0.1",
+        "@seedcord/gateway": "^0.7.5",
+        "discord.js": "^14.27.0",
+        "envapt": "^8.2.4",
+        "zod": "^4.6.7"
+    },
+    "devDependencies": {
+        "@mikro-orm/cli": "^7.2.5",
+        "@seedcord/eslint-config": "^2.5.0",
+        "@seedcord/tsconfig": "^2.0.6",
+        "@types/node": "^26.6.5",
+        "eslint": "^10.13.0",
+        "jiti": "^2.7.0",
+        "prettier": "^3.9.10",
+        "seedcord": "^0.21.5",
+        "typescript": "~6.0"
+    }
+}
